@@ -18,6 +18,10 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
+    background: linear-gradient(270deg, #f9f9f9 0%, #ffffff 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease-in-out infinite;
+    transition: background 0.3s ease;
 }
 
 .container {
@@ -31,16 +35,24 @@ body {
     color: white;
     text-align: center;
     padding: 60px 20px;
+    position: relative;
+    z-index: 999;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     margin-bottom: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .header p {
     font-style: italic;
+}
+
+.header:hover h1 {
+    transform: scale(1.05) rotate(1deg);
 }
 
 .nav {
@@ -63,16 +75,23 @@ body {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav a:hover {
     color: var(--accent-color);
+    transform: translateY(-2px);
+    text-decoration: underline;
 }
 
 .section {
     margin-top: 60px;
     padding-bottom: 60px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
 .section h2 {
@@ -106,9 +125,9 @@ body {
     margin: 10px 5px 0 0;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .telegram {
@@ -122,6 +141,21 @@ body {
 .submit-btn {
     background-color: var(--accent-color);
     color: white;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .contact-form {
@@ -139,16 +173,72 @@ body {
     font-size: 1rem;
 }
 
-/* Анимация при скролле */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease-out;
+    transition: all 0.8s ease-out;
 }
 
 .reveal.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.case-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.case-card {
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #2563eb;
+    transform: scale(1.1);
+}
+
+/* Анимация фона */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.scrolled .header {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Активный пункт меню */
+.nav a.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 /* SVG иконки */
@@ -169,148 +259,4 @@ body {
     .nav li {
         margin: 10px 0;
     }
-}
-/* Анимация появления при скролле */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
-
-.reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Ховер-анимация для кнопок */
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-/* Легкая тень у header */
-.header {
-    transition: box-shadow 0.3s ease-in-out;
-}
-/* Пульсация */
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-/* Анимация при наведении на элементы меню */
-.nav a:hover {
-    color: #3b82f6; /* акцентный цвет */
-    transform: translateY(-2px);
-    transition: all 0.3s ease-in-out;
-    text-decoration: underline;
-}
-/* Затухание при скролле */
-.header {
-    position: relative;
-    z-index: 999;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-body.scrolled .header {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* Легкая тень при наведении на секции */
-.section {
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.section:hover {
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
-}
-/* Анимация появления текста по буквам */
-.typing-text {
-    overflow: hidden;
-    border-right: 3px solid #3b82f6;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #3b82f6; }
-}
-/* Анимация фона */
-body {
-    background: linear-gradient(270deg, #f9f9f9 0%, #ffffff 100%);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease-in-out infinite;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Активный пункт меню */
-.nav a.active {
-    color: #3b82f6;
-    font-weight: bold;
-    border-bottom: 2px solid #3b82f6;
-}
-/* Анимация логотипа */
-.header h1 {
-    transition: transform 0.5s ease-in-out;
-}
-
-.header:hover h1 {
-    transform: scale(1.05) rotate(1deg);
-}
-/* Стиль карточки кейса */
-.case-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.case-card {
-    background-color: #f3f4f6;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-.case-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-/* Кнопка "Наверх" */
-.back-to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    padding: 10px 20px;
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    display: none;
-    z-index: 9999;
-    transition: all 0.3s ease;
-}
-
-.back-to-top:hover {
-    background-color: #2563eb;
-    transform: scale(1.1);
 }
