@@ -1,5 +1,3 @@
-// script.js
-
 // Анимация загрузки
 window.addEventListener('load', function () {
     document.getElementById('loading').style.display = 'none';
@@ -20,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach(section => observer.observe(section));
 });
 
-// Эффект затухания шапки при скролле
+// Эффект затухания шапки
 window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
         document.body.classList.add('scrolled');
