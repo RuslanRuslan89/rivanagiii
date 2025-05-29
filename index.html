@@ -14,8 +14,9 @@
     <meta property="og:title" content="Руслан Кондратьев – Таплинки & Мультиссылки">
     <meta property="og:description" content="Профессиональные услуги по созданию таплинков и мультиссылок. Руслан Кондратьев помогает вашему сайту достичь высоких позиций в поисковых системах.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ruslanruslan89.github.io/rivanagiii/"> 
-    <meta property="og:image" content="https://ruslanruslan89.github.io/rivanagiii/images/preview.jpg">  <!-- замени на реальный URL изображения -->
+    <meta property="og:url" content="https://ruslanruslan89.github.io/rivanagiii/">    
+    <!-- Если preview.jpg существует: -->
+    <!-- <meta property="og:image" content="https://ruslanruslan89.github.io/rivanagiii/images/preview.jpg">  -->
 
     <!-- Стили для анимации загрузки -->
     <style>
@@ -35,7 +36,7 @@
         }
 
         .spinner {
-            border: 4px solid #f3f3f3;
+            border: 4px solid #f3f3f6;
             border-top: 4px solid #3b82f6;
             border-radius: 50%;
             width: 50px;
@@ -70,7 +71,7 @@
 <nav class="nav">
     <div class="container">
         <ul>
-            <li><a href="#services">Услуги</a></li> 
+            <li><a href="#services">Услуги</a></li>    
             <li><a href="#about">О себе</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
@@ -102,7 +103,6 @@
     <section id="contact" class="section fade-in reveal">
         <div class="container">
             <h2>Контакты</h2>
-            <button type="submit" class="btn submit-btn pulse">Отправить</button>
             <ul class="contact-list">
                 <li><strong>Email:</strong> kondratyev.ruslan@example.com</li>
                 <li><strong>Telegram / WhatsApp:</strong> +7 (XXX) XXX-XX-XX</li>
@@ -131,26 +131,28 @@
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
-                <button type="submit" class="btn submit-btn">Отправить</button>
+                <button type="submit" class="btn submit-btn pulse">Отправить</button>
             </form>
         </div>
     </section>
-</main>
-<section id="cases" class="section fade-in reveal">
-    <div class="container">
-        <h2>Кейсы</h2>
-        <div class="case-list">
-            <div class="case-card">
-                <h3>Проект 1</h3>
-                <p>SEO оптимизация сайта за 3 месяца. Повышение позиций по ключевым запросам.</p>
-            </div>
-            <div class="case-card">
-                <h3>Проект 2</h3>
-                <p>Построение мультиссылок для нового проекта. Увеличение трафика на 40%.</p>
+
+    <section id="cases" class="section fade-in reveal">
+        <div class="container">
+            <h2>Кейсы</h2>
+            <div class="case-list">
+                <div class="case-card">
+                    <h3>Проект 1</h3>
+                    <p>SEO оптимизация сайта за 3 месяца. Повышение позиций по ключевым запросам.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Проект 2</h3>
+                    <p>Построение мультиссылок для нового проекта. Увеличение трафика на 40%.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
+
 <footer class="footer">
     <div class="container">
         <p>&copy; 2025 Руслан Кондратьев. Все права защищены.</p>
@@ -158,6 +160,6 @@
 </footer>
 
 <script src="script.js"></script>
-    <button id="backToTop" class="btn back-to-top">↑ Наверх</button>
+<button id="backToTop" class="btn back-to-top">↑ Наверх</button>
 </body>
 </html>
