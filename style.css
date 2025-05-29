@@ -170,3 +170,26 @@ body {
         margin: 10px 0;
     }
 }
+/* Анимация появления при скролле */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ховер-анимация для кнопок */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Легкая тень у header */
+.header {
+    transition: box-shadow 0.3s ease-in-out;
+}
