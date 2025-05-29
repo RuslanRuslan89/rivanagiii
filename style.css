@@ -306,3 +306,19 @@ body {
         margin-bottom: 10px;
     }
 }
+.btn.telegram::after,
+.btn.whatsapp::after {
+    content: '';
+}
+.btn.telegram span,
+.btn.whatsapp span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn.telegram svg,
+.btn.whatsapp svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0;
+}
