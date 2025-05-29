@@ -193,3 +193,30 @@ body {
 .header {
     transition: box-shadow 0.3s ease-in-out;
 }
+/* Пульсация */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+/* Анимация при наведении на элементы меню */
+.nav a:hover {
+    color: #3b82f6; /* акцентный цвет */
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+/* Затухание при скролле */
+.header {
+    position: relative;
+    z-index: 999;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+body.scrolled .header {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
