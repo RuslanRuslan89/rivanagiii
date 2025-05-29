@@ -248,3 +248,15 @@ body.scrolled .header {
     from, to { border-color: transparent }
     50% { border-color: #3b82f6; }
 }
+/* Анимация фона */
+body {
+    background: linear-gradient(270deg, #f9f9f9 0%, #ffffff 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
