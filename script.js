@@ -1,3 +1,5 @@
+// script.js
+
 // Анимация загрузки
 window.addEventListener('load', function () {
     document.getElementById('loading').style.display = 'none';
