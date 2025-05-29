@@ -1,18 +1,5 @@
 // script.js
 
-// Темная тема по умолчанию
-document.addEventListener("DOMContentLoaded", function () {
-    if (!localStorage.getItem('theme')) {
-        localStorage.setItem('theme', 'dark');
-        document.body.classList.add('dark-mode');
-    } else {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-    }
-});
-
 // Анимация загрузки
 window.addEventListener('load', function () {
     document.getElementById('loading').style.display = 'none';
