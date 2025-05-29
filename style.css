@@ -267,3 +267,11 @@ body {
     font-weight: bold;
     border-bottom: 2px solid #3b82f6;
 }
+/* Анимация логотипа */
+.header h1 {
+    transition: transform 0.5s ease-in-out;
+}
+
+.header:hover h1 {
+    transform: scale(1.05) rotate(1deg);
+}
