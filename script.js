@@ -1,19 +1,36 @@
 // script.js
 
-// Анимация появления при скролле
+// Темная тема по умолчанию
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver((entries) => {
+    if (!localStorage.getItem('theme')) {
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark-mode');
+    } else {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    }
+});
+
+// Анимация загрузки
+window.addEventListener('load', function () {
+    document.getElementById('loading').style.display = 'none';
+});
+
+// Анимация при скролле
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
 });
 
 // Форма обратной связи
