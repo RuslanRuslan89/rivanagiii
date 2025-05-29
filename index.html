@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Руслан Кондратьев – Мастер Таплинков</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Руслан Кондратьев – Таплинки & Мультиссылки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <h1>Руслан Кондратьев</h1>
-    <p style="font-style: italic;">Специалист по таплинкам и мультиссылкам</p>
+<header class="header">
+    <div class="container">
+        <h1>Руслан Кондратьев</h1>
+        <p>Эксперт по таплинкам и мультиссылкам</p>
+    </div>
 </header>
 
-<nav>
-    <a href="#services">Услуги</a>
-    <a href="#about">О себе</a>
-    <a href="#contact">Контакты</a>
+<nav class="nav">
+    <div class="container">
+        <ul>
+            <li><a href="#services">Услуги</a></li> 
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </div>
 </nav>
 
-<div class="container">
-
-    <section id="services">
-        <h2>Наши услуги</h2>
-        <div class="vintage-border">
-            <ul>
+<main class="main">
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <ul class="services-list">
                 <li>Создание качественных таплинков</li>
-                <li>Построение мультиссылок для продвижения сайтов</li>
-                <li>Работа с редиректами и ссылочными структурами</li>
-                <li>Анализ SEO эффективности ссылочной массы</li>
-                <li>Персонализированные решения под проект клиента</li>
+                <li>Построение мультиссылок</li>
+                <li>Анализ ссылочной массы</li>
+                <li>SEO-оптимизация под проект</li>
+                <li>Персональные решения</li>
             </ul>
         </div>
     </section>
 
-    <section id="about">
-        <h2>О себе</h2>
-        <div class="vintage-border">
-            <p>Руслан Кондратьев — профессионал в области цифрового маркетинга и SEO, с многолетним опытом работы в создании таплинков и мультиссылок. Его подход сочетает в себе строгость аналитики и интуитивное понимание потребностей сайта.</p>
-            <p>С помощью сложных техник построения ссылочной массы, он помогает вашему проекту выйти на новый уровень видимости в интернете. Его работа основана на честности, прозрачности и глубоком знании алгоритмов поисковых систем.</p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>О себе</h2>
+            <p>Руслан Кондратьев — профессионал в области цифрового маркетинга и SEO. С многолетним опытом в создании таплинков и мультиссылок, он помогает вашему сайту достичь высоких позиций в поисковых системах.</p>
+            <p>Его подход сочетает строгость аналитики с интуитивным пониманием поведения пользователей и алгоритмов поисковиков.</p>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Контакты</h2>
-        <div class="vintage-border">
-            <p><strong>Email:</strong> kondratyev.ruslan@example.com</p>
-            <p><strong>Telegram / WhatsApp:</strong> +7 (XXX) XXX-XX-XX</p>
-            <p><strong>Telegram ID:</strong> @ruslan_kondratyev</p>
-            <p><strong>Адрес:</strong> Санкт-Петербург, Россия</p>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> kondratyev.ruslan@example.com</li>
+                <li><strong>Telegram / WhatsApp:</strong> +7 (XXX) XXX-XX-XX</li>
+                <li><strong>Telegram ID:</strong> @ruslan_kondratyev</li>
+                <li><strong>Город:</strong> Санкт-Петербург</li>
+            </ul>
         </div>
     </section>
+</main>
 
-</div>
-
-<footer>
-    &copy; 2025 Руслан Кондратьев. Все права защищены.
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Руслан Кондратьев. Все права защищены.</p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
