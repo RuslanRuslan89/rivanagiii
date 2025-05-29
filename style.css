@@ -100,7 +100,6 @@ body {
     font-style: italic;
 }
 
-/* Кнопки */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -125,7 +124,6 @@ body {
     color: white;
 }
 
-/* Форма */
 .contact-form {
     display: grid;
     gap: 15px;
@@ -139,18 +137,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-}
-
-/* Анимация появления */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Темная тема */
@@ -184,7 +170,27 @@ body {
     border: 1px solid #444;
 }
 
-/* Mobile */
+/* Анимация при скролле */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SVG иконки */
+.telegram svg,
+.whatsapp svg {
+    fill: white;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
     .nav ul {
         flex-direction: column;
@@ -194,29 +200,4 @@ body {
     .nav li {
         margin: 10px 0;
     }
-}
-
-/* Стиль для кнопки Темная тема */
-.dark-toggle {
-    margin-left: 20px;
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dark-toggle:hover {
-    background-color: #2563eb;
-}
-
-/* Позиционирование кнопки внутри header */
-.header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
