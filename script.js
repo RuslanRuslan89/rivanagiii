@@ -26,3 +26,17 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     alert("Спасибо за обращение! Мы скоро свяжемся с вами.");
     this.reset();
 });
+// Анимация при скролле
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+});
