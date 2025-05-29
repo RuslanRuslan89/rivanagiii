@@ -220,3 +220,31 @@ body {
 body.scrolled .header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+/* Легкая тень при наведении на секции */
+.section {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+/* Анимация появления текста по буквам */
+.typing-text {
+    overflow: hidden;
+    border-right: 3px solid #3b82f6;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3b82f6; }
+}
