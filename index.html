@@ -6,8 +6,46 @@
     <title>Руслан Кондратьев – Таплинки & Мультиссылки</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Стили для анимации загрузки -->
+    <style>
+        #loading { 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.5s ease;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
+
 <body>
+
+<!-- Анимация загрузки -->
+<div id="loading">
+    <div class="spinner"></div>
+</div>
 
 <header class="header">
     <div class="container">
@@ -19,7 +57,7 @@
 <nav class="nav">
     <div class="container">
         <ul>
-            <li><a href="#services">Услуги</a></li> 
+            <li><a href="#services">Услуги</a></li>
             <li><a href="#about">О себе</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
@@ -82,6 +120,13 @@
         <p>&copy; 2025 Руслан Кондратьев. Все права защищены.</p>
     </div>
 </footer>
+
+<script>
+    // Скрыть анимацию загрузки после полной загрузки страницы
+    window.addEventListener('load', function () {
+        document.getElementById('loading').style.display = 'none';
+    });
+</script>
 
 <script src="script.js"></script>
 </body>
