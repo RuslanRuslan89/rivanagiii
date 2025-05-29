@@ -260,3 +260,30 @@ body.scrolled .header {
         margin: 10px 0;
     }
 }
+/* Стиль для социальных кнопок */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.btn.telegram,
+.btn.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.telegram svg,
+.btn.whatsapp svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 8px;
+}
