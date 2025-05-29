@@ -322,3 +322,7 @@ body {
     vertical-align: middle;
     margin-right: 0;
 }
+.btn.telegram::after,
+.btn.whatsapp::after {
+    content: '';
+}
